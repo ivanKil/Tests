@@ -36,6 +36,7 @@ abstract class MainActivityBase : AppCompatActivity(), ViewSearchContract {
         }
         setQueryListener()
         setRecyclerView()
+        searchButton.setOnClickListener { presenter.searchGitHub(searchEditText.text.toString()) }
     }
 
     private fun setRecyclerView() {
