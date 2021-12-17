@@ -16,7 +16,7 @@ class MainActivityEspressoTestReal : MainActivityEspressoTestBase() {
     fun activitySearch_IsWorking() {
         onView(withId(R.id.searchEditText)).perform(click())
         onView(withId(R.id.searchEditText)).perform(
-            replaceText("algol"),
+            replaceText(SEARCH_WORD_ALGOL),
             closeSoftKeyboard()
         )
         onView(withId(R.id.searchEditText)).perform(pressImeActionButton())
@@ -30,7 +30,7 @@ class MainActivityEspressoTestReal : MainActivityEspressoTestBase() {
     fun progressBar_IsDisplayed() {
         onView(withId(R.id.searchEditText)).perform(click())
         onView(withId(R.id.searchEditText)).perform(
-            replaceText("algol"),
+            replaceText(SEARCH_WORD_ALGOL),
             closeSoftKeyboard()
         )
         onView(withId(R.id.searchEditText)).perform(pressImeActionButton())
