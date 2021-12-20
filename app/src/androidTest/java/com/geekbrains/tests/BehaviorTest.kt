@@ -100,7 +100,7 @@ class BehaviorTest {
         //так как мы кликаем по кнопке не отправляя никаких поисковых запросов.
         //Чтобы проверить отображение определенного количества репозиториев,
         //вам в одном и том же методе нужно отправить запрос на сервер и открыть DetailsScreen.
-        Assert.assertEquals(changedText.text, "Number of results: 0")
+        Assert.assertEquals(changedText.text, TEST_NUMBER_OF_RESULTS_ZERO)
     }
 
     @Test
@@ -154,7 +154,7 @@ class BehaviorTest {
                 Until.findObject(By.res(packageName, "totalCountTextView")),
                 TIMEOUT
             )
-        Assert.assertEquals(changedText.text.toString(), "Number of results: 0")
+        Assert.assertEquals(changedText.text.toString(), TEST_NUMBER_OF_RESULTS_ZERO)
     }
 
     companion object {
