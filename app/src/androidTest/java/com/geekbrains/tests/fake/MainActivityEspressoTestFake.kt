@@ -18,7 +18,7 @@ class MainActivityEspressoTestFake : MainActivityEspressoTestBase() {
     fun activitySearch_IsWorking() {
         onView(withId(R.id.searchEditText)).perform(click())
         onView(withId(R.id.searchEditText)).perform(
-            replaceText("algol"),
+            replaceText(SEARCH_WORD_ALGOL),
             ViewActions.closeSoftKeyboard()
         )
         onView(withId(R.id.searchEditText)).perform(pressImeActionButton())

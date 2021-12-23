@@ -44,7 +44,7 @@ class DetailsActivityEspressoTest {
 
     @Test
     fun activityTextView_HasText() {
-        val assertion: ViewAssertion = matches(withText("Number of results: 0"))
+        val assertion: ViewAssertion = matches(withText(TEST_NUMBER_OF_RESULTS_ZERO))
         onView(withId(R.id.totalCountTextView)).check(assertion)
     }
 
@@ -75,8 +75,6 @@ class DetailsActivityEspressoTest {
         onView(withId(R.id.decrementButton)).perform(click())
         onView(withId(R.id.totalCountTextView)).check(matches(withText("Number of results: -1")))
     }
-
-
 
 
     @After
