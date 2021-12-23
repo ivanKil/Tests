@@ -5,8 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.geekbrains.tests.R
-import kotlinx.android.synthetic.main.activity_details.*
-import java.util.*
 
 class DetailsActivity : AppCompatActivity() {
 
@@ -23,7 +21,7 @@ class DetailsActivity : AppCompatActivity() {
 
     companion object {
 
-        private const val TOTAL_COUNT_EXTRA = "TOTAL_COUNT_EXTRA"
+        const val TOTAL_COUNT_EXTRA = "TOTAL_COUNT_EXTRA"
 
         fun getIntent(context: Context, totalCount: Int): Intent {
             return Intent(context, DetailsActivity::class.java).apply {
